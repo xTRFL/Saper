@@ -57,7 +57,7 @@ namespace Saper
                     if (tempCell.flag == true)
                         tempCell.Image = null;
                     else if (tempCell.flag == false)
-                        tempCell.Image = Image.FromFile(@"C:\Users\User\source\repos\Minesweeper\Minesweeper\flag.png");
+                        tempCell.Image = Image.FromFile(@"..\..\flag.png");
                     tempCell.flag = !tempCell.flag;
                 }
             }

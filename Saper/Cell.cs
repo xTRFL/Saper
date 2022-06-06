@@ -42,7 +42,7 @@ namespace Saper
             FlatStyle = FlatStyle.Flat;
             if (bomb)
             {
-                Image = Image.FromFile(@"C:\Users\User\source\repos\Minesweeper\Minesweeper\bomb.jpg");
+                Image = Image.FromFile(@"..\..\bomb.jpg");
             }
             else
             {

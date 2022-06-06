@@ -42,6 +42,7 @@ namespace Saper
             FlatStyle = FlatStyle.Flat;
             if (bomb)
             {
+                Text = null;
                 Image = Image.FromFile(@"..\..\bomb.jpg");
             }
             else

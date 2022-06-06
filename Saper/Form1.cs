@@ -44,8 +44,19 @@ namespace Saper
             }
             else if (Custom.Checked)
             {
-                szerokosc = Convert.ToInt32(TBszer.Text);
-                wysokosc = Convert.ToInt32(TBwys.Text);
+                try
+                {
+                    szerokosc = Convert.ToInt32(TBszer.Text);
+                    wysokosc = Convert.ToInt32(TBwys.Text);
+                    if (szerokosc < 2 || wysokosc < 2)
+                        throw new FormatException();
+                }
+                catch(FormatException)
+                {
+                    szerokosc = 9;
+                    wysokosc = 9;
+                    MessageBox.Show("Wprowadzono niewłaściwe dane. Rozmiar został ustawiony na mały.");
+                }
             }
             int difficulty = trackBar1.Value;
             if (difficulty == 1)

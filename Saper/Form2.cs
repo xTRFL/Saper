@@ -335,8 +335,11 @@ namespace Saper
                 {
                     for (int j = 0; j < game.width; j++)
                     {
-                        if(game.field[i, j].bomb)
-                            game.field[i, j].BackColor = Color.Purple;
+                        if (game.field[i, j].bomb)
+                        {
+                            game.field[i, j].Text = "B";
+                            game.field[i, j].ForeColor = Color.Purple;
+                        }
                     }
                 }
             }
@@ -349,6 +352,7 @@ namespace Saper
                         if (!game.field[i, j].opened)
                         {
                             game.field[i, j].BackColor = default(Color);
+                            game.field[i, j].Text = null;
                             game.field[i, j].UseVisualStyleBackColor = true;
                         }
                     }

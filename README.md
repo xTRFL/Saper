@@ -25,7 +25,9 @@ funkcjonalności - opcje umożliwiające dostosowanie rozgrywki do potrzeb użyt
 - Możliwość dostosowania rozmiaru planszy oraz poziomu trudności.
 Projekt został napisany w języku C# z wykorzystaniem Windows Forms.
 ## 2. Opis algorytmów
+
 **Algorytm odsłaniania pól.**
+
 Jeżeli gracz odsłoni pole, do którego przypisana jest cyfra zero, to algorytm rozpoczyna
 przeszukiwanie sąsiadujących pól. Przeszukiwanie zaczyna się od górnego pola i idzie zgodnie
 z ruchem wskazówek zegara. Jeżeli pole nie posiada górnego pola, to przeszukiwanie
@@ -34,7 +36,9 @@ Algorytm sprawdza stan sąsiadującego pola. Jeżeli na polu jest bomba, to pole
 zmian. Jeżeli na polu jest cyfra nie będąca zerem, to pole jest odsłaniane. Jeżeli na polu
 znajduje się cyfra zero, to pole jest odsłaniane oraz aktywowany zostaje dla niego algorytm.
 Wykonanie kończy się, gdy nie ma już żadnych sąsiadujących pól do przeszukania.
+
 **Algorytm podpowiedzi.**
+
 Algorytm przydziela polom kolory zależne od przeanalizowanego stanu. Kolor zielony - jeżeli
 na polu na pewno nie ma bomby, kolor czerwony, jeżeli na polu na pewno jest bomba oraz
 kolor żółty, jeżeli pole ma nieznany stan.
@@ -42,7 +46,9 @@ Pola są analizowane pod kątem różnych kryteriów. Najpierw sprawdzane jest o
 pola. Jeżeli pole jest nieodsłonięte, to algorytm przechodzi do następnego pola. Jeżeli pole
 jest odsłonięte, to algorytm analizuje cyfrę na polu i porównuje ją z liczbą nieodsłoniętych
 sąsiadujących pól, które zostały oznaczone jako pola czerwone lub z liczbą odsłoniętych pól.
+
 **Algorytm autorozgrywania**
+
 Algorytm korzysta z algorytmu podpowiedzi, w celu określenia pola do otwarcia. Jeżeli żadne
 z pól nie jest oznaczone jako pole czerwone, to pola otwierane są losowo. 
 ## 3. Opis programu

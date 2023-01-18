@@ -84,51 +84,71 @@ Klasa zawiera pola:
 - bombs (liczba bomb na polu minowym)
 Klasa zawiera jeden konstruktor. Klasa zawiera wszystkie funkcje niezbędne do prowadzenia
 rozgrywki na polu minowym. 
+
 **Win()**
+
 Funkcja Win() sprawdza stan pola winCounter, aby określić czy gra została wygrana.
+
 **OpenCell()**
+
 Funkcja OpenCell() wywołuje funkcję Open() z klasy Cell, aktualizuje stan winCountera, a
 następnie może wywołać funkcję Opener().
 Jako argumenty wywołania przyjmuje dwie współrzędne, określające położenie otwieranego
 pola.
+
 **Opener()**
+
 Funkcja Opener() służy do otwierania sąsiadujących pól, gdy gracz otworzy pole z zerem.
 Kolejno przechodzi przez sąsiadujące pola rozpoczynając od pola nad polem otwieranym. 
 Jeżeli pole spełnia warunki, to zostaje dla niego wywołana funkcja OpenCell().
 Jako argumenty wywołania przyjmuje dwie współrzędne, określające położenie otwieranego
 pola.
+
 **CountBombs()**
+
 Funkcja CountBombs() służy do określenia liczby bomb sąsiadujących z danym polem.
 Jako argumenty wywołania przyjmuje dwie współrzędne, określające położenie
 rozpatrywanego przez funkcję pola.
+
 **Neighbour()**
+
 Funkcja Neighbour() sprawdza czy dane pole leży w granicach pola minowego, czy nie zostało
 otwarte oraz czy nie zawiera flagi. Funkcja jest wykorzystywana przez funkcję Opener(), w
 celu określenia czy pole może zostać otwarte przez algorytm.
 Jako argumenty wywołania przyjmuje dwie współrzędne, określające położenie
 rozpatrywanego przez funkcję pola.
+
 **AutoplayNeighbour()**
+
 Funkcja AutoplayNeighbour() sprawdza czy dane pole leży w granicach planszy oraz czy nie
 zostało otwarte.
 Jako argumenty wywołania przyjmuje dwie współrzędne, określające położenie
 rozpatrywanego przez funkcję pola.
+
 **BombNeighbour()**
+
 Funkcja BombNeighbour() sprawdza czy dane pole leży w granicach planszy oraz czy jest tam
 bomba.
 Jako argumenty wywołania przyjmuje dwie współrzędne, określające położenie
 rozpatrywanego przez funkcję pola.
+
 **ColorChanger()**
+
 Funkcja ColorChanger() ustala flagę pola podczas autorozgrywania lub pokazywania
 podpowiedzi. W drugim wypadku zmienia również kolor pól.
 Jako argumenty wywołania przyjmuje dwie współrzędne, określające położenie
 rozpatrywanego przez funkcję pola, liczbę typu short określającą flagę autorozgrywania oraz
 argument typu bool określający czy funkcja ma zmieniać kolory pola czy jedynie
 zaktualizować stan flagi.
+
 **AutoplayColor()**
+
 Funkcja AutoplayColor() określa jaki kolor powinno mieć pole i zwraca odpowiedni kolor.
 Jako argumenty wywołania przyjmuje dwie współrzędne, określające położenie
 rozpatrywanego przez funkcję pola.
+
 **Checker()**
+
 Funkcja Checker() przechodzi przez kolejne pola sąsiadujące z polem o współrzędnych
 podanych jako argumenty funkcji, sprawdza czy sprawdzają one kryteria funkcji
 AutoplayNeighbour(), a jeżeli tak, to zmienia kolor pola w zależności od wskazania funkcji
